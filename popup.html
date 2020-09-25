@@ -2,7 +2,9 @@
 <!-- Use the popup to give alfred direction
 To start I'm thinking:
     add a to do
-    go to dark mode -->
+    go to dark mode -> use contentscripts.js
+    https://developer.chrome.com/extensions/overview#pages
+-->
 <html>
   <head>
     <style>
@@ -14,7 +16,11 @@ To start I'm thinking:
     </style>
   </head>
   <body>
-    <button id="changeColor"></button>
-    <script src="popup.js"></script>
+    <div classname="popup-container">
+        <h1>How may I be of service?</h1>
+        add button to open a side drawer
+        <button id="changeColor"></button>
+        <script src="popup.js"></script>
+    </div>
   </body>
 </html>
