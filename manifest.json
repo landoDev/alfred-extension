@@ -2,7 +2,7 @@
     "name": "Alfred",
     "version": "1.0",
     "description": "To-Do Organizer",
-    "permissions": ["storage"],
+    "permissions": ["declarativeContent", "storage"],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
