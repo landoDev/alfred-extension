@@ -9,8 +9,16 @@ chrome.browserAction.onClicked.addListener(function(tab) {
       var activeTab = tabs[0];
       chrome.tabs.sendMessage(activeTab.id, {"message": "clicked_browser_action"});
     });
+    chrome.tabs.sendMessage(tab.id, "toggle");
   });
-
+// open new tab
+chrome.runtime.onMessage.addListener(
+function(request, sender, sendResponse) {
+    if( request.message === "open_new_tab" ) {
+    chrome.tabs.create({"url": request.url});
+    }
+}
+);
 // tutorial code
 // chrome.runtime.onInstalled.addListener(function() {
 //     chrome.storage.sync.set({color: '#3aa757'}, function() {

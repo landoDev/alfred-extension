@@ -1,12 +1,11 @@
 {
     "name": "Alfred",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "To-Do Organizer. Icons made by Freepik: https://www.flaticon.com/authors/freepik .",
     "permissions": ["activeTab", "declarativeContent", "storage"],
     "content_scripts": [{
         "matches": [
-            "https://*/*",
-            "http://*/*"
+            "<all_urls>"
         ],
         "js": ["jquery-3.5.1.min.js", "content.js"]
     }],
