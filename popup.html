@@ -5,6 +5,9 @@ To start I'm thinking:
     go to dark mode -> use contentscripts.js
     https://developer.chrome.com/extensions/overview#pages
 -->
+<meta>
+  
+</meta>
 <html>
   <head>
     <style>
@@ -19,9 +22,19 @@ To start I'm thinking:
     <div classname="popup-container">
         <h1>How may I be of service?</h1>
         add button to open a side drawer
+        <div id="all-notes">
+          <ul id="todo-items"></ul>
+        </div>
+        <div id="take-note">
+            <form id="new-todo-form" method="POST" action="#">
+                <textarea id="new-todo"></textarea>
+                <input type="image" src="image/done.svg" id="submitButton">
+            </form>
+        </div>
         <button id="changeColor"></button>
-        <button id="openDash"></button>
-        <script src="popup.js"></script>
+        
     </div>
   </body>
 </html>
+<script src="content-script.js"></script>
+<script src="popup.js"></script>
